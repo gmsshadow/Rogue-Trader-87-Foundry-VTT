@@ -1,0 +1,41 @@
+{
+    "id": "rt87",
+    "title": "Warhammer 40k Rogue Trader (1987)",
+    "description": "Implementation for Foundry VTT of the 1987 Rogue Trader rules by Games Workshop.",
+    "version": "0.0.1",
+    "compatibility": {
+        "minimum": "13",
+        "verified": "13",
+        "maximum": "13"
+    },
+    "authors": [
+        {
+            "name": "Barry Robertson",
+            "email": "diceandshadows@gmail.com"
+        }
+    ],
+    "scripts": [
+
+    ],
+    "esmodules": [
+    
+    ],
+    "styles": [
+
+    ],
+    "packs": [
+    
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English"
+        }
+    ],
+    "socket": false,
+    "initiative": "1d6",
+    "gridDistance": 1,
+    "gridUnits": "yd",
+    "primaryTokenAttribute": "resource.wounds",
+    "secondaryTokenAttribute": "resource.PSILevel"
+}
