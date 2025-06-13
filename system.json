@@ -33,8 +33,8 @@
     "initiative": "1d6",
     "gridDistance": 1,
     "gridUnits": "yd",
-    "primaryTokenAttribute": "resource.wounds",
-    "secondaryTokenAttribute": "resource.PSILevel",
+    "primaryTokenAttribute": "wounds",
+    "secondaryTokenAttribute": "PSILevel",
     "url": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/",
     "manifest": "https://raw.githubusercontent.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/refs/heads/main/system.json",
     "download": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/archive/refs/heads/main.zip"

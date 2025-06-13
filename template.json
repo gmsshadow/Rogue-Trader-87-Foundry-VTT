@@ -28,22 +28,22 @@
         ],
         "weapon":{
             "attackwith": "BS",
-            "short range":0,
-            "long range":0,
-            "to hit short":0,
-            "to hit long":0,
+            "shortRange":0,
+            "longRange":0,
+            "toHitShort":0,
+            "toHitLong":0,
             "strength":0,
             "damage":0,
-            "save modifier":0,
+            "saveModifier":0,
             "close":false,
             "heavy":0,
             "slow":false,
-            "follow through":false,
+            "followThrough":false,
             "area":0
         },
         "armour":{
             "heavy":0,
-            "save roll":0
+            "saveRoll":0
         }
 
     }
