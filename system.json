@@ -37,5 +37,8 @@
     "gridDistance": 1,
     "gridUnits": "yd",
     "primaryTokenAttribute": "resource.wounds",
-    "secondaryTokenAttribute": "resource.PSILevel"
+    "secondaryTokenAttribute": "resource.PSILevel",
+    "url": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/",
+    "manifest": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/system.json",
+    "download": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/archive/refs/heads/main.zip"
 }
