@@ -27,10 +27,7 @@
     
     ],
     "languages": [
-        {
-            "lang": "en",
-            "name": "English"
-        }
+    
     ],
     "socket": false,
     "initiative": "1d6",
@@ -39,6 +36,6 @@
     "primaryTokenAttribute": "resource.wounds",
     "secondaryTokenAttribute": "resource.PSILevel",
     "url": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/",
-    "manifest": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/system.json",
+    "manifest": "https://raw.githubusercontent.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/refs/heads/main/system.json",
     "download": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/archive/refs/heads/main.zip"
 }
