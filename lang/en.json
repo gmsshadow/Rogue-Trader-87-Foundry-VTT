@@ -23,7 +23,7 @@
       "base": {
         "FIELDS": {
           "biography": {"label": "Biography"},
-          "Wounds": {
+          "wounds": {
             "value": {"label": "Wounds"},
             "max": {"label": "Maximum Wounds"}
           },
