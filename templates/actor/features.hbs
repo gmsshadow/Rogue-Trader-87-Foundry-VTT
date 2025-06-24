@@ -25,12 +25,6 @@
               class="ability-score"
               data-dtype='Number'
             />
-            <span
-              class='ability-mod rollable'
-              data-action='roll'
-              data-roll='d6+@abilities.{{key}}.mod'
-              data-label='{{localize (lookup @root.config.abilities key)}}'
-            >{{numberFormat ability.mod decimals=0 sign=true}}</span>
           </div>
         {{/each}}
       </div>
