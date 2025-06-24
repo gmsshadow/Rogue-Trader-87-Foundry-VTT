@@ -47,7 +47,7 @@
       "thumbnail": "systems/rt87/assets/anvil-impact.png"
     }
   ],
-  "version": "3.0.0",
+  "version": "3.0.1",
   "compatibility": {
     "minimum": "13.339",
     "verified": "13.345"
@@ -66,13 +66,13 @@
   "socket": false,
   "manifest": "https://raw.githubusercontent.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/refs/heads/main/system.json",
   "download": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/archive/refs/heads/main.zip",
-  "background": "systems/rt87/assets/anvil-impact.png",
+  "background": "systems/rt87/assets/rtBackground.jpg",
   "grid": {
     "type": 1,
     "distance": 1,
     "units": "yds",
     "diagonals": 0
   },
-  "primaryTokenAttribute": "health",
+  "primaryTokenAttribute": "wounds",
   "secondaryTokenAttribute": "power"
 }
