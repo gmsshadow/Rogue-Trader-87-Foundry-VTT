@@ -39,7 +39,7 @@ export default class rt87Character extends rt87ActorBase {
     for (const key in this.abilities) {
       // Calculate the modifier using d20 rules.
       this.abilities[key].mod = Math.floor(
-        (this.abilities[key].value)
+        (this.abilities[key].value - 6)
       );
       // Handle ability label localization.
       this.abilities[key].label =
