@@ -23,7 +23,7 @@ export default class rt87Character extends rt87ActorBase {
         obj[ability] = new fields.SchemaField({
           value: new fields.NumberField({
             ...requiredInteger,
-            initial: 10,
+            initial: 3,
             min: 0,
           }),
         });
@@ -39,7 +39,7 @@ export default class rt87Character extends rt87ActorBase {
     for (const key in this.abilities) {
       // Calculate the modifier using d20 rules.
       this.abilities[key].mod = Math.floor(
-        (this.abilities[key].value - 10) / 2
+        (this.abilities[key].value - 6)
       );
       // Handle ability label localization.
       this.abilities[key].label =
