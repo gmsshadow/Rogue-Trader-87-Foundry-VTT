@@ -7,17 +7,17 @@ export default class rt87ActorBase extends foundry.abstract
     const requiredInteger = { required: true, nullable: false, integer: true };
     const schema = {};
 
-    schema.health = new fields.SchemaField({
+    schema.wounds = new fields.SchemaField({
       value: new fields.NumberField({
         ...requiredInteger,
-        initial: 10,
+        initial: 1,
         min: 0,
       }),
-      max: new fields.NumberField({ ...requiredInteger, initial: 10 }),
+      max: new fields.NumberField({ ...requiredInteger, initial: 1 }),
     });
     schema.power = new fields.SchemaField({
-      value: new fields.NumberField({ ...requiredInteger, initial: 5, min: 0 }),
-      max: new fields.NumberField({ ...requiredInteger, initial: 5 }),
+      value: new fields.NumberField({ ...requiredInteger, initial: 0, min: 0 }),
+      max: new fields.NumberField({ ...requiredInteger, initial: 0 }),
     });
     schema.biography = new fields.HTMLField();
 
