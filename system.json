@@ -1,41 +1,78 @@
 {
-    "id": "rt87",
-    "title": "Warhammer 40k Rogue Trader (1987)",
-    "description": "Implementation for Foundry VTT of the 1987 Rogue Trader rules by Games Workshop.",
-    "version": "0.0.2",
-    "compatibility": {
-        "minimum": "13",
-        "verified": "13",
-        "maximum": "13"
-    },
-    "authors": [
-        {
-            "name": "Barry Robertson",
-            "email": "diceandshadows@gmail.com"
+  "id": "rt87",
+  "title": "Warhammer 40k Rogue Trader (1987)",
+  "description": "The Warhammer 40k Rogue Trader (1987) system for FoundryVTT!",
+  "authors": [
+    {
+      "name": "Barry Robertson",
+      "email": "diceandshadows@gmail.com"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+        "character": {
+            "htmlFields": ["biography"]
+        },
+        "npc": {
+            "htmlFields": ["biography"]
         }
-    ],
-    "scripts": [
-
-    ],
-    "esmodules": [
-    
-    ],
-    "styles": [
-
-    ],
-    "packs": [
-    
-    ],
-    "languages": [
-    
-    ],
-    "socket": false,
-    "initiative": "1d6",
-    "gridDistance": 1,
-    "gridUnits": "yd",
-    "primaryTokenAttribute": "resources.wounds",
-    "secondaryTokenAttribute": "resources.PSILevel",
-    "url": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/",
-    "manifest": "https://raw.githubusercontent.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/refs/heads/main/system.json",
-    "download": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/archive/refs/heads/main.zip"
+    },
+    "Item": {
+        "feature": {
+            "htmlFields": ["description"]
+        },
+        "gear": {
+            "htmlFields": ["description"]
+        },
+        "spell": {
+            "htmlFields": ["description"]
+        }
+    }
+  },
+  "flags": {
+    "hotReload": {
+      "extensions": ["css", "html", "hbs", "json"],
+      "paths": ["css", "lang", "templates"]
+    }
+  },
+  "url": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/",
+  "license": "LICENSE.txt",
+  "readme": "README.md",
+  "bugs": "Replace this with a link to file issues or tickets",
+  "changelog": "CHANGELOG.md",
+  "media": [
+    {
+      "type": "setup",
+      "url": "systems/rt87/assets/anvil-impact.png",
+      "thumbnail": "systems/rt87/assets/anvil-impact.png"
+    }
+  ],
+  "version": "3.0.0",
+  "compatibility": {
+    "minimum": "13.339",
+    "verified": "13.345"
+  },
+  "esmodules": ["module/rt87.mjs"],
+  "styles": ["css/rt87.css"],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "packs": [],
+  "packFolders": [],
+  "socket": false,
+  "manifest": "https://raw.githubusercontent.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/refs/heads/main/system.json",
+  "download": "https://github.com/gmsshadow/Rogue-Trader-87-Foundry-VTT/archive/refs/heads/main.zip",
+  "background": "systems/rt87/assets/anvil-impact.png",
+  "grid": {
+    "type": 1,
+    "distance": 1,
+    "units": "yds",
+    "diagonals": 0
+  },
+  "primaryTokenAttribute": "health",
+  "secondaryTokenAttribute": "power"
 }

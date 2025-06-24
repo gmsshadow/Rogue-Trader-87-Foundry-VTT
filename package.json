@@ -1,0 +1,20 @@
+{
+  "name": "rt87",
+  "version": "3.0.0",
+  "description": "CSS compiler for the rt87 system",
+  "scripts": {
+    "build": "sass src/scss/rt87.scss css/rt87.css --style=expanded --no-source-map",
+    "watch": "sass src/scss/rt87.scss css/rt87.css --style=expanded --source-map --watch",
+    "createSymlinks": "node src/create-symlinks.mjs"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ],
+  "author": "Asacolips",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "sass": "^1.53.0",
+    "js-yaml": "^4.1.0"
+  }
+}
