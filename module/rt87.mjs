@@ -95,25 +95,16 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 /* -------------------------------------------- */
 
 Hooks.once("ready", () => {
-  console.log("RT87 | Ability-check hook registered (HTML)");
-
   Hooks.on("renderChatMessageHTML", (message, html, data) => {
-    console.log("RT87 | renderChatMessageHTML data.flavor:", data.flavor);
-
-    // Only apply to your Ability Checks
-    if ( data.flavor?.startsWith("Ability Check") ) {
-      console.log("RT87 |   → Matched Ability Check");
-
-      // Find the .dice-roll container and replace its innerHTML
-      const diceRollContainer = html.querySelector(".dice-roll");
-      if ( diceRollContainer ) {
-        // Use renderTemplate (returns a Promise) to get your Pass/Fail markup
+    const flavor = message.data.flavor;    // ← pull it off the document
+    console.log("RT87 | Chat flavor:", flavor);
+    if ( flavor?.startsWith("Ability Check") ) {
+      const container = html.querySelector(".dice-roll");
+      if ( container ) {
         renderTemplate(
           "systems/rt87/templates/chat/roll-test.hbs",
           data
-        ).then(rendered => {
-          diceRollContainer.innerHTML = rendered;
-        });
+        ).then(rendered => container.innerHTML = rendered);
       }
     }
   });
