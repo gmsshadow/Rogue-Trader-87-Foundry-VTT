@@ -1,13 +1,14 @@
 {
   "RT87": {
     "Ability": {
-      "Ma": { "long": "Movement Allowance", "abbr": "MA"},
-      "Ws": { "long": "Weapon Skill", "abbr": "WS" },
-      "Con": { "long": "Constitution", "abbr": "con" },
-      "Dex": { "long": "Dexterity", "abbr": "dex" },
-      "Int": { "long": "Intelligence", "abbr": "int" },
-      "Wis": { "long": "Wisdom", "abbr": "wis" },
-      "Cha": { "long": "Charisma", "abbr": "cha" }
+      "MA": { "long": "Movement Allowance", "abbr": "MA"},
+      "WS": { "long": "Weapon Skill", "abbr": "WS" },
+      "BS": { "long": "Ballistic Skill", "abbr": "BS" },
+      "ST": { "long": "Strength", "abbr": "S" },
+      "TO": { "long": "Toughness", "abbr": "T" },
+      "WO": { "long": "Wounds", "abbr": "W" },
+      "Itv": { "long": "Initiative", "abbr": "I" },
+      "Att": { "long": "Attacks", "abbr": "A" }
     },
     "SheetLabels": {
       "Actor": "rt87 Actor Sheet",
