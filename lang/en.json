@@ -15,9 +15,9 @@
     "Actor": {
       "Tabs": {
         "Biography": "Biography",
-        "Features": "Features",
+        "Features": "Abilities",
         "Gear": "Gear",
-        "Spells": "Spells",
+        "Spells": "Psionics",
         "Effects": "Effects"
       },
       "base": {
@@ -35,7 +35,7 @@
       },
       "Character": {
         "FIELDS": {
-          "attributes.level.value": {"label": "Level"}
+          "attributes.level.value": {"label": "Points Value"}
         }
       },
       "NPC": {
