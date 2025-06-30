@@ -25,3 +25,10 @@ RT87.abilityAbbreviations = {
   itv: 'RT87.Ability.Itv.abbr',
   att: 'RT87.Ability.Att.abbr',
 };
+
+RT87.abilitiesPersonal = {
+  ld: 'RT87.AbilityPersonal.Ld.Long',
+};
+RT87.abilityPersonalAbbreviations = {
+  ld: 'RT87.AbilityPersonal.Ld.abbr',
+};
