@@ -1,7 +1,8 @@
 {
   "RT87": {
     "Ability": {
-      "Str": { "long": "Strength", "abbr": "str" },
+      "Ma": { "long": "Movement Allowance", "abbr": "MA"},
+      "Ws": { "long": "Weapon Skill", "abbr": "WS" },
       "Con": { "long": "Constitution", "abbr": "con" },
       "Dex": { "long": "Dexterity", "abbr": "dex" },
       "Int": { "long": "Intelligence", "abbr": "int" },

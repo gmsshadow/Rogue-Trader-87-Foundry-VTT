@@ -5,7 +5,8 @@ export const RT87 = {};
  * @type {Object}
  */
 RT87.abilities = {
-  str: 'RT87.Ability.Str.long',
+  ma: 'RT87.Ability.Ma.long',
+  ws: 'RT87.Ability.Ws.long',
   dex: 'RT87.Ability.Dex.long',
   con: 'RT87.Ability.Con.long',
   int: 'RT87.Ability.Int.long',
@@ -14,7 +15,8 @@ RT87.abilities = {
 };
 
 RT87.abilityAbbreviations = {
-  str: 'RT87.Ability.Str.abbr',
+  ma: 'RT87.Ability.Ma.abbr',
+  ws: 'RT87.Ability.Ws.abbr',
   dex: 'RT87.Ability.Dex.abbr',
   con: 'RT87.Ability.Con.abbr',
   int: 'RT87.Ability.Int.abbr',
