@@ -10,9 +10,12 @@
       "Itv": { "long": "Initiative", "abbr": "I" },
       "Att": { "long": "Attacks", "abbr": "A" }
     },
+    
     "AbilityPersonal": {
-      "Ld": { "long": "Leadership", "abbr": "Ld"}
-    },
+      "Ld": {
+        "long": "Leadership",
+        "abbr": "Ld"
+      },
 
     "SheetLabels": {
       "Actor": "rt87 Actor Sheet",

@@ -27,7 +27,7 @@ RT87.abilityAbbreviations = {
 };
 
 RT87.abilitiesPersonal = {
-  ld: 'RT87.AbilityPersonal.Ld.Long',
+  ld: 'RT87.AbilityPersonal.Ld.long',
 };
 RT87.abilityPersonalAbbreviations = {
   ld: 'RT87.AbilityPersonal.Ld.abbr',
