@@ -95,17 +95,26 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 /* -------------------------------------------- */
 
 Hooks.once("ready", () => {
-  Hooks.on("renderChatMessageHTML", (message, html, data) => {
-    const flavor = message.data.flavor;    // ← pull it off the document
-    console.log("RT87 | Chat flavor:", flavor);
+  console.log("RT87 | Ability-check hook registered");
+
+  Hooks.on("renderChatMessageHTML", (message, html, context) => {
+    // DEBUG: what does the context actually contain?
+    console.log("RT87 | chat context:", context);
+
+    // Pull the flavor off the context, not message.data
+    const flavor = context.flavor;
     if ( flavor?.startsWith("Ability Check") ) {
-      const container = html.querySelector(".dice-roll");
-      if ( container ) {
-        renderTemplate(
-          "systems/rt87/templates/chat/roll-test.hbs",
-          data
-        ).then(rendered => container.innerHTML = rendered);
-      }
+      console.log("RT87 |  → Matched Ability Check");
+
+      // Find the dice-roll container
+      const dice = html.querySelector(".dice-roll");
+      if (!dice) return;
+
+      // Re-render using your pass/fail template, passing the entire context
+      renderTemplate(
+        "systems/rt87/templates/chat/roll-test.hbs",
+        context
+      ).then(rendered => dice.innerHTML = rendered);
     }
   });
 });
