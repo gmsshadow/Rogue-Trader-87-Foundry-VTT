@@ -12,7 +12,10 @@
     },
     
     "AbilityPersonal": {
-      "Ld": { "long": "Leadership", "abbr": "Ld"}
+      "Ld": { "long": "Leadership", "abbr": "Ld"},
+      "Int": { "long": "Intelligence", "abbr": "Int"},
+      "Cl": { "long": "Cool", "abbr": "Cl"},
+      "WP": { "long": "Willpower", "abbr": "WP"}
     },
 
     "SheetLabels": {
