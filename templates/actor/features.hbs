@@ -4,7 +4,7 @@
   data-group='primary'
   data-tab='features'
 >
-  <!-- 3 columns: core | personal | main -->
+  <!-- 2 columns: core | personal -->
   <section class='grid grid-2col'>
     <aside class='sidebar'>
       {{! The grid classes are defined in scss/global/_grid.scss. To use,
@@ -16,8 +16,8 @@
             <label
               class='resource-label rollable flexlarge align-left'
               data-action='roll'
-              data-roll='d6cs<@abilities.{{key}}.value'
-              data-label='{{localize (lookup @root.config.abilities key)}}'
+              data-roll='1d6cs<@abilities.{{key}}.value'
+              data-flavor="Check vs {{localize (lookup @root.config.abilities key)}}"
             >
               {{localize (lookup @root.config.abilities key)}}
             </label>
