@@ -16,8 +16,8 @@
             <label
               class='resource-label rollable flexlarge align-left'
               data-action='roll'
-              data-roll='1d6cs<@abilities.{{key}}.value'
-              data-label="Check vs {{localize (lookup @root.config.abilities key)}}"
+              data-roll='1d6cs<=@abilities.{{key}}.value'
+              data-flavor='Ability Check vs {{localize (lookup @root.config.abilities key)}}'
             >
               {{localize (lookup @root.config.abilities key)}}
             </label>
@@ -42,8 +42,8 @@
             <label
               class='resource-label rollable flexlarge align-left'
               data-action='roll'
-              data-roll='2d6cs<@abilitiesPersonal.{{key}}.value'
-              data-label='{{localize (lookup @root.config.abilitiesPersonal key)}}'
+              data-roll='2d6cs<=@abilitiesPersonal.{{key}}.value'
+              data-flavor='Ability Check vs {{localize (lookup @root.config.abilitiesPersonal key)}}'
             >
               {{localize (lookup @root.config.abilitiesPersonal key)}}
             </label>
@@ -62,4 +62,3 @@
       {{!-- Other main content can go here --}}
     </section>
   </section>
-</section>

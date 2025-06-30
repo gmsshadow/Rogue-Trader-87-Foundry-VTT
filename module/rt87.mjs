@@ -94,16 +94,19 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 /*  Ability check message hook                  */
 /* -------------------------------------------- */
 
-Hooks.on("renderChatMessage", (app, html, data) => {
-  // Only for Ability Checks
-  if (data.label?.startsWith("Check")) {
-    html.find(".dice-roll").html(
-      app.template.render({
-        ...data,
-        template: "systems/rt87/templates/chat/roll-test.hbs"
-      })
-    );
-  }
+Hooks.once("ready", () => {
+  console.log("RT87 | Ability-check hook registered");
+  Hooks.on("renderChatMessage", (app, html, data) => {
+    console.log("RT87 | renderChatMessage flavor:", data.flavor);
+    if ( data.flavor?.startsWith("Ability Check") ) {
+      html.find(".dice-roll").html(
+        app.template.render({
+          ...data,
+          template: "systems/rt87/templates/chat/roll-test.hbs"
+        })
+      );
+    }
+  });
 });
 
 /* -------------------------------------------- */
