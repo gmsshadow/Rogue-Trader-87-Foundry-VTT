@@ -96,7 +96,7 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 
 Hooks.on("renderChatMessage", (app, html, data) => {
   // Only for Ability Checks
-  if (data.flavor?.startsWith("Check")) {
+  if (data.label?.startsWith("Check")) {
     html.find(".dice-roll").html(
       app.template.render({
         ...data,
