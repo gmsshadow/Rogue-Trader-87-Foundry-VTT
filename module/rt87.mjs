@@ -100,10 +100,7 @@ Hooks.once("ready", () => {
     console.log("RT87 | renderChatMessage flavor:", data.flavor);
     if ( data.flavor?.startsWith("Ability Check") ) {
       html.find(".dice-roll").html(
-        app.template.render({
-          ...data,
-          template: "systems/rt87/templates/chat/roll-test.hbs"
-        })
+        app.template.render({ ...data, template: "systems/rt87/templates/chat/roll-test.hbs" })
       );
     }
   });
