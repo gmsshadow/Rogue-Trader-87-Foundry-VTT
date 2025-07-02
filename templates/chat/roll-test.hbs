@@ -1,4 +1,5 @@
-{{#if (gte data.roll.total 0)}}
+{{!-- Fail on negative, Pass otherwise --}}
+{{#if (lt data.roll.total 0)}}
   <strong>Fail!</strong>
 {{else}}
   <strong>Pass!</strong>

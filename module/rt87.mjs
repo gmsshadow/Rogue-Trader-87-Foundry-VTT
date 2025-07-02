@@ -98,24 +98,21 @@ Hooks.once("ready", () => {
   console.log("RT87 | Ability-check hook registered");
 
   Hooks.on("renderChatMessageHTML", (message, html, context) => {
-    // DEBUG: what does the context actually contain?
-    console.log("RT87 | chat context:", context);
+    // 1) Only run on ability checks
+    if (!context.flavor?.includes("Ability Check")) return;
 
-    // Pull the flavor off the context, not message.data
-    const flavor = context.flavor;
-    if ( flavor?.startsWith("Ability Check") ) {
-      console.log("RT87 |  → Matched Ability Check");
+    // 2) Grab the formula node
+    const formula = html.querySelector(".dice-formula");
+    if (!formula) return;
 
-      // Find the dice-roll container
-      const dice = html.querySelector(".dice-roll");
-      if (!dice) return;
-
-      // Re-render using your pass/fail template, passing the entire context
-      renderTemplate(
+    // 3) Render your Pass/Fail template
+    renderTemplate(
       "systems/rt87/templates/chat/roll-test.hbs",
       { data: context }
-      ).then(rendered => dice.innerHTML = rendered);
-    }
+    ).then(rendered => {
+      // 4) Inject it right after the dice formula
+      formula.insertAdjacentHTML("afterend", rendered);
+    });
   });
 });
 
