@@ -112,8 +112,8 @@ Hooks.once("ready", () => {
 
       // Re-render using your pass/fail template, passing the entire context
       renderTemplate(
-        "systems/rt87/templates/chat/roll-test.hbs",
-        context
+      "systems/rt87/templates/chat/roll-test.hbs",
+      { data: context }
       ).then(rendered => dice.innerHTML = rendered);
     }
   });
