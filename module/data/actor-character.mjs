@@ -31,10 +31,19 @@ export default class rt87Character extends rt87ActorBase {
       }, {})
     );
 
-      schema.abilitiesPersonal = new fields.SchemaField(
+    schema.abilitiesPersonal = new fields.SchemaField(
     Object.keys(CONFIG.RT87.abilitiesPersonal).reduce((obj, ability) => {
       obj[ability] = new fields.SchemaField({
         value: new fields.NumberField({ ...requiredInteger, initial: 7, min: 0 }),
+      });
+      return obj;
+    }, {})
+  );
+
+    schema.strengthAbilities = new fields.SchemaField(
+    Object.keys(CONFIG.RT87.strengthAbilities).reduce((obj, ability) => {
+      obj[ability] = new fields.SchemaField({
+        value: new fields.NumberField({ ...requiredInteger, initial: 3, min: 0 }),
       });
       return obj;
     }, {})

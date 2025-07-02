@@ -4,8 +4,6 @@
       "MA": { "long": "Movement Allowance", "abbr": "MA"},
       "WS": { "long": "Weapon Skill", "abbr": "WS" },
       "BS": { "long": "Ballistic Skill", "abbr": "BS" },
-      "ST": { "long": "Strength", "abbr": "S" },
-      "TO": { "long": "Toughness", "abbr": "T" },
       "WO": { "long": "Wounds", "abbr": "W" },
       "Itv": { "long": "Initiative", "abbr": "I" },
       "Att": { "long": "Attacks", "abbr": "A" }
@@ -16,6 +14,11 @@
       "Int": { "long": "Intelligence", "abbr": "Int"},
       "Cl": { "long": "Cool", "abbr": "Cl"},
       "WP": { "long": "Willpower", "abbr": "WP"}
+    },
+
+    "StrengthAbility": {
+      "ST": { "long": "Strength", "abbr": "S" },
+      "TO": { "long": "Toughness", "abbr": "T" }
     },
 
     "SheetLabels": {

@@ -29,6 +29,21 @@
             />
           </div>
         {{/each}}
+        {{#each system.strengthAbilities as |strengthAbilities key|}}
+          <div class='ability flexrow flex-group-center'>
+            <label
+              class='resource-label rollable flexlarge align-left'
+           >
+              {{localize (lookup @root.config.abilities key)}}
+            </label>
+            <input
+              type='text'
+              name='system.strengthAbilities.{{key}}.value'
+              value='{{ability.value}}'
+              data-dtype='Number'
+            />
+          </div>
+        {{/each}}
       </div>
     </aside>
 
