@@ -50,9 +50,9 @@ RT87.combatAbilitiesAbbreviation = {
 };
 
 RT87.movementAbilities = {
-  ma: 'RT87.Ability.MA.long',
+  ma: 'RT87.movementAbility.MA.long',
 };
 
 RT87.movementAbilitiesAbbreviation = {
-  ma: 'RT87.Ability.MA.abbr',
+  ma: 'RT87.movementAbility.MA.abbr',
 };
