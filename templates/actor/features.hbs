@@ -11,6 +11,21 @@
           use both the "grid" and "grid-Ncol" class where "N" can be any number
           from 1 to 12 and will create that number of columns.  }}
       <div class='abilities flexcol'>
+          {{#each system.movementAbilities as |movementAbilities key|}}
+          <div class='ability flexrow flex-group-center'>
+            <label
+              class='resource-label rollable flexlarge align-left'
+           >
+              {{localize (lookup @root.config.movementAbilities key)}}
+            </label>
+            <input
+              type='text'
+              name='system.movementAbilities.{{key}}.value'
+              value='{{movementAbilities.value}}'
+              data-dtype='Number'
+            />
+          </div>
+        {{/each}}
         {{#each system.abilities as |ability key|}}
           <div class='ability flexrow flex-group-center'>
             <label
@@ -34,12 +49,27 @@
             <label
               class='resource-label rollable flexlarge align-left'
            >
-              {{localize (lookup @root.config.abilities key)}}
+              {{localize (lookup @root.config.strengthAbilities key)}}
             </label>
             <input
               type='text'
               name='system.strengthAbilities.{{key}}.value'
-              value='{{ability.value}}'
+              value='{{strengthAbilities.value}}'
+              data-dtype='Number'
+            />
+          </div>
+        {{/each}}
+        {{#each system.combatAbilities as |combatAbilities key|}}
+          <div class='ability flexrow flex-group-center'>
+            <label
+              class='resource-label rollable flexlarge align-left'
+           >
+              {{localize (lookup @root.config.combatAbilities key)}}
+            </label>
+            <input
+              type='text'
+              name='system.combatAbilities.{{key}}.value'
+              value='{{combatAbilities.value}}'
               data-dtype='Number'
             />
           </div>

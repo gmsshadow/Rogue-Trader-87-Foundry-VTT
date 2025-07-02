@@ -1,12 +1,8 @@
 {
   "RT87": {
     "Ability": {
-      "MA": { "long": "Movement Allowance", "abbr": "MA"},
       "WS": { "long": "Weapon Skill", "abbr": "WS" },
-      "BS": { "long": "Ballistic Skill", "abbr": "BS" },
-      "WO": { "long": "Wounds", "abbr": "W" },
-      "Itv": { "long": "Initiative", "abbr": "I" },
-      "Att": { "long": "Attacks", "abbr": "A" }
+      "BS": { "long": "Ballistic Skill", "abbr": "BS" }
     },
     
     "AbilityPersonal": {
@@ -16,9 +12,19 @@
       "WP": { "long": "Willpower", "abbr": "WP"}
     },
 
-    "StrengthAbility": {
+    "strengthAbility": {
       "ST": { "long": "Strength", "abbr": "S" },
       "TO": { "long": "Toughness", "abbr": "T" }
+    },
+
+    "combatAbility": {
+      "WO": { "long": "Wounds", "abbr": "W" },
+      "Itv": { "long": "Initiative", "abbr": "I" },
+      "Att": { "long": "Attacks", "abbr": "A" }
+    },
+
+    "movementAbility": {
+      "MA": { "long": "Movement Allowance", "abbr": "MA"}
     },
 
     "SheetLabels": {

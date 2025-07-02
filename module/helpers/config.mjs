@@ -5,21 +5,13 @@ export const RT87 = {};
  * @type {Object}
  */
 RT87.abilities = {
-  ma: 'RT87.Ability.MA.long',
   ws: 'RT87.Ability.WS.long',
   bs: 'RT87.Ability.BS.long',
-  wo: 'RT87.Ability.WO.long',
-  itv: 'RT87.Ability.Itv.long',
-  att: 'RT87.Ability.Att.long',
 };
 
 RT87.abilityAbbreviations = {
-  ma: 'RT87.Ability.MA.abbr',
   ws: 'RT87.Ability.WS.abbr',
   bs: 'RT87.Ability.BS.abbr',
-  wo: 'RT87.Ability.WO.abbr',
-  itv: 'RT87.Ability.Itv.abbr',
-  att: 'RT87.Ability.Att.abbr',
 };
 
 RT87.abilitiesPersonal = {
@@ -43,4 +35,24 @@ RT87.strengthAbilities = {
 RT87.strengthAbilitiesAbbreviation = {
   st: 'RT87.strengthAbility.ST.abbr',
   to: 'RT87.strengthAbility.TO.abbr',
+};
+
+RT87.combatAbilities = {
+  wo: 'RT87.combatAbility.WO.long',
+  itv: 'RT87.combatAbility.Itv.long',
+  att: 'RT87.combatAbility.Att.long',
+};
+
+RT87.combatAbilitiesAbbreviation = {
+  wo: 'RT87.combatAbility.WO.abbr',
+  itv: 'RT87.combatAbility.Itv.abbr',
+  att: 'RT87.combatAbility.Att.abbr',
+};
+
+RT87.movementAbilities = {
+  ma: 'RT87.Ability.MA.long',
+};
+
+RT87.movementAbilitiesAbbreviation = {
+  ma: 'RT87.Ability.MA.abbr',
 };
