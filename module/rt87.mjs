@@ -97,7 +97,7 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 Hooks.once("ready", () => {
   Hooks.on("renderChatMessageHTML", (message, html, context) => {
     // Only interested in our “[Test]” rolls
-    const flavor = message.data.flavor ?? "";
+    const flavor = message.flavor || "";
     if (!flavor.startsWith("[Test]")) return;
 
     // Get the margin from the Roll
@@ -110,7 +110,6 @@ Hooks.once("ready", () => {
     const banner = document.createElement("div");
     banner.classList.add("rt87-roll-outcome");
     banner.innerHTML = `<strong>${outcome}</strong>`;
-    // html is now a native HTMLElement
     html.querySelector(".dice-footer")?.appendChild(banner);
   });
 });
