@@ -490,3 +490,12 @@
 .rt87 .effects .item .effect-controls {
   border: none;
 }/*# sourceMappingURL=rt87.css.map */
+
+.rt87-roll-outcome {
+  margin-top: .5em;
+  padding: .3em .6em;
+  border-radius: .25em;
+  background-color: rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: bold;
+}

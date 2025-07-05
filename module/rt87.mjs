@@ -95,24 +95,23 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 /* -------------------------------------------- */
 
 Hooks.once("ready", () => {
-  console.log("RT87 | Ability-check hook registered");
-
   Hooks.on("renderChatMessageHTML", (message, html, context) => {
-    // 1) Only run on ability checks
-    if (!context.flavor?.includes("Ability Check")) return;
+    // Only interested in our “[Test]” rolls
+    const flavor = message.data.flavor ?? "";
+    if (!flavor.startsWith("[Test]")) return;
 
-    // 2) Grab the formula node
-    const formula = html.querySelector(".dice-formula");
-    if (!formula) return;
+    // Get the margin from the Roll
+    const total = message.roll?.total;
+    if (typeof total !== "number") return;
+    const passed = total >= 0;
 
-    // 3) Render your Pass/Fail template
-    renderTemplate(
-      "systems/rt87/templates/chat/roll-test.hbs",
-      { data: context }
-    ).then(rendered => {
-      // 4) Inject it right after the dice formula
-      formula.insertAdjacentHTML("afterend", rendered);
-    });
+    // Inject a banner
+    const outcome = passed ? "Pass!" : "Fail!";
+    const banner = document.createElement("div");
+    banner.classList.add("rt87-roll-outcome");
+    banner.innerHTML = `<strong>${outcome}</strong>`;
+    // html is now a native HTMLElement
+    html.querySelector(".dice-footer")?.appendChild(banner);
   });
 });
 
