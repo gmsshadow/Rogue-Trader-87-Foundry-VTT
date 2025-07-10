@@ -394,17 +394,19 @@ export class rt87ActorSheet extends api.HandlebarsApplicationMixin(
     }
 
     // Handle rolls that supply the formula directly.
-    if (dataset.roll) {
-      let label = dataset.label ? `[ability] ${dataset.label}` : '';
-      let roll = new Roll(dataset.roll, this.actor.getRollData());
-      await roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        rollMode: game.settings.get('core', 'rollMode'),
-      });
-      return roll;
-    }
+
+  if ( dataset.roll ) {
+    const label = dataset.label ? `[ability] ${dataset.label}` : "";
+    const roll  = new Roll(dataset.roll, this.actor.getRollData());
+    await roll.toMessage({
+      speaker:  ChatMessage.getSpeaker({ actor: this.actor }),
+      flavor:   label,
+      rollMode: game.settings.get("core", "rollMode"),
+      template: "systems/rt87/templates/chat/roll-test.hbs"
+    });
+    return roll;
   }
+}
 
   /** Helper Functions */
 

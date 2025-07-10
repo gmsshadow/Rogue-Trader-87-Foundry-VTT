@@ -90,29 +90,6 @@ Handlebars.registerHelper('toLowerCase', function (str) {
   return str.toLowerCase();
 });
 
-/* -------------------------------------------- */
-/*  Ability check message hook                  */
-/* -------------------------------------------- */
-
-Hooks.once("ready", () => {
-  Hooks.on("renderChatMessageHTML", (message, html, context) => {
-    // Only interested in our “[Test]” rolls
-    const label = html.find(".rollable").text().trim();
-    if (!label.startsWith("Ability")) return;
-
-    // Get the margin from the Roll
-    const total = message.roll?.total;
-    if (typeof total !== "number") return;
-    const passed = total >= 0;
-
-    // Inject a banner
-    const outcome = passed ? "Pass!" : "Fail!";
-    const banner = document.createElement("div");
-    banner.classList.add("rt87-roll-outcome");
-    banner.innerHTML = `<strong>${outcome}</strong>`;
-    html.querySelector(".dice-footer")?.appendChild(banner);
-  });
-});
 
 /* -------------------------------------------- */
 /*  Ready Hook                                  */

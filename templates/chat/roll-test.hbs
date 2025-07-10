@@ -1,6 +1,16 @@
-{{!-- Fail on negative, Pass otherwise --}}
-{{#if (lt data.roll.total 0)}}
-  <strong>Fail!</strong>
-{{else}}
-  <strong>Pass!</strong>
-{{/if}}
+<div class="dice-roll rt87-roll">
+  <div class="dice-result">
+    {{!-- display the raw dice if you like --}}
+    <div class="dice-formula">{{roll.formula}}</div>
+    <div class="dice-total">{{roll.total}}</div>
+  </div>
+
+  {{!-- pass/fail --}}
+  <div class="rt87-outcome">
+    {{#if roll.total}}
+      <span class="pass">Pass!</span>
+    {{else}}
+      <span class="fail">Fail!</span>
+    {{/if}}
+  </div>
+</div>
