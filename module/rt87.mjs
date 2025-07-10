@@ -97,19 +97,18 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 Hooks.once("ready", () => {
   Hooks.on("renderChatMessageHTML", (message, html, context) => {
     // Only interested in our “[Test]” rolls
-    const flavor = message.flavor || "";
-    if (!flavor.startsWith("Ability")) return;
+    const label = html.find(".rollable").text().trim();
+    if (!label.startsWith("Ability")) return;
 
-    // Get the margin from the Roll
-    const total = message.roll?.total;
-    if (typeof total !== "number") return;
-    const passed = total >= 0;
+    // message.roll.total for a d6ms roll is the number of successes
+    const successes = message.roll?.total ?? 0;
+    const passed    = successes > 0;           // <-- require at least one success
 
-    // Inject a banner
     const outcome = passed ? "Pass!" : "Fail!";
-    const banner = document.createElement("div");
+    const banner  = document.createElement("div");
     banner.classList.add("rt87-roll-outcome");
     banner.innerHTML = `<strong>${outcome}</strong>`;
+
     html.querySelector(".dice-footer")?.appendChild(banner);
   });
 });
