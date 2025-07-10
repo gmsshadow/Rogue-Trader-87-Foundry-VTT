@@ -98,7 +98,7 @@ Hooks.once("ready", () => {
   Hooks.on("renderChatMessageHTML", (message, html, context) => {
     // Only interested in our “[Test]” rolls
     const flavor = message.flavor || "";
-    if (!flavor.startsWith("[Test]")) return;
+    if (!flavor.startsWith("Ability")) return;
 
     // Get the margin from the Roll
     const total = message.roll?.total;
