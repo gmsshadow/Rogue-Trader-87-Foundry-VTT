@@ -96,7 +96,7 @@ Handlebars.registerHelper('toLowerCase', function (str) {
 
 Hooks.once("ready", () => {
   Hooks.on("renderChatMessageHTML", (message, html, context) => {
-    // Only interested in our “[Test]” rolls
+    // Only interested in our “Ability” rolls
     const label = html.find(".rollable").text().trim();
     if (!label.startsWith("Ability")) return;
 
