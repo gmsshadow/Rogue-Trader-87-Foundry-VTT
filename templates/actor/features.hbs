@@ -33,6 +33,7 @@
               data-action='roll'
               data-roll='1d6'
               data-label='Ability Check vs {{localize (lookup @root.config.abilities key)}} of {{ability.value}}'
+              data-dc='{{ability.value}}'
             >
               {{localize (lookup @root.config.abilities key)}}
             </label>
@@ -89,6 +90,7 @@
               data-action='roll'
               data-roll='2d6'
               data-label='Ability Check vs {{localize (lookup @root.config.abilitiesPersonal key)}} of {{abilityPersonal.value}}'
+              data-dc='{{abilityPersonal.value}}'
             >
               {{localize (lookup @root.config.abilitiesPersonal key)}}
             </label>

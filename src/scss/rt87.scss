@@ -19,3 +19,13 @@
   @import 'components/items';
   @import 'components/effects';
 }
+
+.rt87-roll .dice-total.pass,
+.rt87-roll .rt87-outcome .pass {
+  color: green;
+}
+
+.rt87-roll .dice-total.fail,
+.rt87-roll .rt87-outcome .fail {
+  color: red;
+}
