@@ -15,8 +15,8 @@ export default class rt87Spell extends rt87ItemBase {
       nullable: false,
       integer: true,
       initial: 1,
-      min: 0,
-      max: 9,
+      min: 1,
+      max: 4,
     });
 
     return schema;

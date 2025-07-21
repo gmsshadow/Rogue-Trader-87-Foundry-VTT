@@ -82,9 +82,9 @@
       },
       "Spell": {
         "FIELDS": {
-          "level": {"label": "Spell Level"}
+          "level": {"label": "Power Level"}
         },
-        "SpellLVL": "Level {level} Spells",
+        "SpellLVL": "Level {level} Powers",
         "AddLVL": "Add LVL {level}"
       }
     },
