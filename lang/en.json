@@ -47,14 +47,14 @@
             "max": {"label": "Maximum Wounds"}
           },
           "power": {
-            "value": {"label": "Power"},
+            "value": {"label": "Power Points"},
             "max": {"label": "Maximum Power"}
           }
         }
       },
       "Character": {
         "FIELDS": {
-          "attributes.level.value": {"label": "Points Value"}
+          "attributes.level.value": {"label": "Advances"}
         }
       },
       "NPC": {
