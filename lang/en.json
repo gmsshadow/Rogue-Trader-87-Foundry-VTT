@@ -104,7 +104,7 @@
     "Item": {
       "gear": "Gear",
       "feature": "Feature",
-      "spell": "Spell"
+      "spell": "Power"
     }
   }
 }
