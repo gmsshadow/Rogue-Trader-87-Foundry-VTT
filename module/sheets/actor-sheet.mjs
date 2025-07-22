@@ -172,10 +172,6 @@ export class rt87ActorSheet extends api.HandlebarsApplicationMixin(
         case 'header':
         case 'tabs':
           return tabs;
-        case 'biography':
-          tab.id = 'biography';
-          tab.label += 'Biography';
-          break;
         case 'features':
           tab.id = 'features';
           tab.label += 'Features';
@@ -191,6 +187,10 @@ export class rt87ActorSheet extends api.HandlebarsApplicationMixin(
         case 'effects':
           tab.id = 'effects';
           tab.label += 'Effects';
+          break;
+        case 'biography':
+          tab.id = 'biography';
+          tab.label += 'Biography';
           break;
       }
       if (this.tabGroups[tabGroup] === tab.id) tab.cssClass = 'active';
