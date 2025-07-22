@@ -66,16 +66,16 @@ export class rt87ActorSheet extends api.HandlebarsApplicationMixin(
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
     // Not all parts always render
-    options.parts = ['header', 'tabs', 'biography'];
+    options.parts = ['header', 'tabs'];
     // Don't show the other tabs if only limited view
     if (this.document.limited) return;
     // Control which parts show based on document subtype
     switch (this.document.type) {
       case 'character':
-        options.parts.push('features', 'gear', 'spells', 'effects');
+        options.parts.push('features', 'gear', 'spells', 'effects','biography');
         break;
       case 'npc':
-        options.parts.push('gear', 'effects');
+        options.parts.push('features', 'gear', 'spells', 'effects', 'biography');
         break;
     }
   }
