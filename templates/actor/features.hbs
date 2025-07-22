@@ -75,25 +75,6 @@
             />
           </div>
         {{/each}}
-        {{#each system.armourSave as |armourSave key|}}
-          <div class='ability flexrow flex-group-center'>
-            <label
-              class='resource-label rollable flexlarge align-left'
-              data-action='roll'
-              data-roll='1d6'
-              data-label='Save vs {{localize (lookup @root.config.armourSave key)}} of {{armourSave.value}}'
-              data-dc='{{armourSave.value}}'
-            >
-              {{localize (lookup @root.config.armourSave key)}}
-            </label>
-            <input
-              type='text'
-              name='system.armourSave.{{key}}.value'
-              value='{{armourSave.value}}'
-              data-dtype='Number'
-            />
-          </div>
-        {{/each}}
       </div>
     </aside>
 
@@ -117,6 +98,25 @@
               type='text'
               name='system.abilitiesPersonal.{{key}}.value'
               value='{{abilityPersonal.value}}'
+              data-dtype='Number'
+            />
+          </div>
+        {{/each}}
+        {{#each system.armourSave as |armourSave key|}}
+          <div class='ability flexrow flex-group-center'>
+            <label
+              class='resource-label rollable flexlarge align-left'
+              data-action='roll'
+              data-roll='1d6'
+              data-label='Save vs {{localize (lookup @root.config.armourSave key)}} of {{armourSave.value}}'
+              data-dc='{{armourSave.value}}'
+            >
+              {{localize (lookup @root.config.armourSave key)}}
+            </label>
+            <input
+              type='text'
+              name='system.armourSave.{{key}}.value'
+              value='{{armourSave.value}}'
               data-dtype='Number'
             />
           </div>

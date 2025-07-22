@@ -28,8 +28,8 @@
     },
 
     "armourSave": {
-      "Armour": { "long": "Armour", "abbr": "Armr"},
-      "Shield": { "long": "Shield", "abbr": "Shld"}
+      "armour": { "long": "Armour", "abbr": "Armr"},
+      "shield": { "long": "Shield", "abbr": "Shld"}
     },
 
     "SheetLabels": {
