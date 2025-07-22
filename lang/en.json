@@ -27,6 +27,11 @@
       "MA": { "long": "Movement Allowance", "abbr": "MA"}
     },
 
+    "armourSave": {
+      "Armour": { "long": "Armour", "abbr": "Armr"},
+      "Shield": { "long": "Shield", "abbr": "Shld"}
+    },
+
     "SheetLabels": {
       "Actor": "rt87 Actor Sheet",
       "Item": "rt87 Item Sheet"

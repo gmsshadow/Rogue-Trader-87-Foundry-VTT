@@ -67,6 +67,18 @@ export default class rt87Character extends rt87ActorBase {
     }, {})
   );
 
+      schema.armourSave = new fields.SchemaField(
+    Object.keys(CONFIG.RT87.armourSave).reduce((obj, ability) => {
+        obj[ability] = new fields.SchemaField({
+          value: new fields.NumberField({...requiredInteger,
+            initial: 0,
+            min: 0,
+          }),
+        });
+        return obj;
+      }, {})
+    );
+
     return schema;
   }
 
